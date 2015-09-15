@@ -1,4 +1,4 @@
-<?php namespace Nsrosenqvist\CookieConsent\Components;
+<?php namespace NSRosenqvist\CookieConsent\Components;
 
 class CookieConsent extends \Cms\Classes\ComponentBase
 {

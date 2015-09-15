@@ -1,4 +1,4 @@
-<?php namespace Nsrosenqvist\CookieConsent;
+<?php namespace NSRosenqvist\CookieConsent;
 
 class Plugin extends \System\Classes\PluginBase
 {
@@ -16,7 +16,7 @@ class Plugin extends \System\Classes\PluginBase
     public function registerComponents()
     {
         return [
-            'Nsrosenqvist\CookieConsent\Components\CookieConsent' => 'cookieConsent'
+            'NSRosenqvist\CookieConsent\Components\CookieConsent' => 'cookieConsent'
         ];
     }
 }
