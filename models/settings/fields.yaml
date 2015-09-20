@@ -7,50 +7,50 @@ fields:
         label: Message
         type: text
         default: This website uses cookies to ensure you get the best experience on our website
-        description: The message shown by the plugin.
+        comment: The message shown by the plugin.
 
     dismiss:
         label: Dismiss Text
         type: text
         default: Got it!
-        description: The text used on the dismiss button.
+        comment: The text used on the dismiss button.
 
     learnMore:
         label: Learn More Link Text
         type: text
         default: More info
-        description: The text shown on the link to the cookie policy (requires the link option to also be set)
+        comment: The text shown on the link to the cookie policy (requires the link option to also be set)
 
     link:
         label: Link
         type: text
-        description: The url of your cookie policy. If not set, the link is hidden.
+        comment: The url of your cookie policy. If not set, the link is hidden.
 
     container:
         label: CSS-selector for container
         type: text
-        description: The element you want the Cookie Consent notification to be appended to. If not set, the Cookie Consent plugin is appended to the body.
+        comment: The element you want the Cookie Consent notification to be appended to. If not set, the Cookie Consent plugin is appended to the body.
 
     theme:
         label: Theme
         type: text
         default: light-floating
-        description: The Cookie Consent theme to use. If you wish to use your own CSS instead, specify the URL of your CSS file. e.g. styles/my_custom_theme.css. This can be a relative or absolute URL. To stop Cookie Consent from loading CSS at all, specify false
+        comment: The Cookie Consent theme to use (light-floating, dark-floating, light-bottom, dark-bottom, light-top, dark-top). If you wish to use your own CSS instead, specify the URL of your CSS file. e.g. styles/my_custom_theme.css. This can be a relative or absolute URL. To stop Cookie Consent from loading CSS at all, specify false.
 
     path:
         label: Path
         type: text
         default: /
-        description: The path for the consent cookie that Cookie Consent uses, to remember that users have consented to cookies. Use to limit consent to a specific path within your website.
+        comment: The path for the consent cookie that Cookie Consent uses, to remember that users have consented to cookies. Use to limit consent to a specific path within your website.
 
     expiryDays:
         label: Expiry Days
         type: number
         default: 365
-        description: The number of days Cookie Consent should store the user’s consent information for.
+        comment: The number of days Cookie Consent should store the user’s consent information for.
 
     version:
         label: Version
         type: text
         default: latest
-        description: Supported options are "latest" or version number (e.g. "1.0.2")
+        comment: Supported options are "latest" or version number (e.g. "1.0.2")
