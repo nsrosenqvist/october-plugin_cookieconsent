@@ -21,7 +21,7 @@ class Plugin extends \System\Classes\PluginBase
         // Settings
         Block::append('scripts', '<script type="text/javascript">window.cookieconsent_options = '.json_encode($this->getSettings(), false).';</script>');
         // Consent Cookie
-        Block::append('scripts', '<script src="//s3.amazonaws.com/cc.silktide.com/cookieconsent.'.Settings::get('version', 'latest').'.min.js" type="text/javascript"></script>');
+        Block::append('scripts', '<script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.9/cookieconsent.min.js" type="text/javascript"></script>');
     }
 
     public function registerSettings()
