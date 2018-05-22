@@ -37,6 +37,18 @@ fields:
         default: light-floating
         comment: The Cookie Consent theme to use (light-floating, dark-floating, light-bottom, dark-bottom, light-top, dark-top). If you wish to use your own CSS instead, specify the URL of your CSS file. e.g. styles/my_custom_theme.css. This can be a relative or absolute URL. To stop Cookie Consent from loading CSS at all, specify false.
 
+    popup_background:
+        label: Popup background
+        type: colorpicker
+        default: "000"
+        comment: Color of the popup background.
+
+    button_background:
+        label: Button background
+        type: colorpicker
+        default: "f1d600"
+        comment: Color of the buttons.
+
     path:
         label: Path
         type: text
