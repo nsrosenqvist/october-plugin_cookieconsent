@@ -18,10 +18,11 @@ class Plugin extends \System\Classes\PluginBase
 
     public function boot()
     {
-        // Settings
-        Block::append('scripts', '<script type="text/javascript">window.cookieconsent_options = '.json_encode($this->getSettings(), false).';</script>');
+        Block::append('styles', '<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/'.Settings::get('version', '3.0.3').'/cookieconsent.min.css" />');
         // Consent Cookie
-        Block::append('scripts', '<script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/'.Settings::get('version', '1.0.10').'/cookieconsent.min.js" type="text/javascript"></script>');
+        Block::append('scripts', '<script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/'.Settings::get('version', '3.0.3').'/cookieconsent.min.js" type="text/javascript"></script>');
+        // Settings
+        Block::append('scripts', '<script type="text/javascript">window.cookieconsent.initialise('.json_encode($this->getSettings(), false).');</script>');
     }
 
     public function registerSettings()
@@ -40,10 +41,20 @@ class Plugin extends \System\Classes\PluginBase
     protected function getSettings()
     {
         return [
-            "message" => Settings::get('message'),
-            "dismiss" => Settings::get('dismiss'),
-            "learnMore" => Settings::get('learnMore'),
-            "link" => Settings::get('link', null),
+            "content" => [
+                "message" => Settings::get('message'),
+                "dismiss" => Settings::get('dismiss'),
+                "link" => Settings::get('learnMore'),
+                "href" => Settings::get('link', null),
+            ],
+            "palette" => [
+                "popup" => [
+                    "background" => Settings::get('popup_background', '#000'),
+                ],
+                "button" => [
+                    "background" => Settings::get('button_background', '#f1d600'),
+                ],
+            ],
             "container" => Settings::get('container', null),
             "theme" => Settings::get('theme'),
             "path" => Settings::get('path'),
