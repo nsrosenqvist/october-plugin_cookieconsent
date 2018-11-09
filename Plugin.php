@@ -25,6 +25,13 @@ class Plugin extends \System\Classes\PluginBase
         Block::append('scripts', '<script type="text/javascript">window.cookieconsent.initialise('.json_encode($this->getSettings(), false).');</script>');
     }
 
+    public function registerPermissions()
+    {
+        return [
+            'nsrosenqvist.cookieconsent.settings' => ['label' => 'Manage CookieConsent Settings', 'tab' => 'CookieConsent']
+        ];
+    }
+
     public function registerSettings()
     {
         return [
@@ -33,7 +40,8 @@ class Plugin extends \System\Classes\PluginBase
                 'description' => 'Manage cookie notification settings.',
                 'icon'        => 'icon-globe',
                 'class'       => 'NSRosenqvist\CookieConsent\Models\Settings',
-                'keywords'    => 'cookie eu law cookies biscuits'
+                'keywords'    => 'cookie eu law cookies biscuits',
+                'permissions' => ['nsrosenqvist.cookieconsent.settings'],
             ]
         ];
     }

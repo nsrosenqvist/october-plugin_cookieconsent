@@ -4,3 +4,5 @@
     - Upgraded plugin to work with the service changes
 1.0.2:
     - Upgraded plugin to work with cookieconsent version 3.0.3
+1.0.3
+    - ACL for settings model
