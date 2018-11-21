@@ -64,5 +64,5 @@ fields:
     version:
         label: Version
         type: text
-        default: latest
-        comment: Supported options are "latest" or version number (e.g. "1.0.2")
+        default: 3.1.0
+        comment: Supported options is version number (e.g. "3.1.0")

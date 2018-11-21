@@ -18,9 +18,9 @@ class Plugin extends \System\Classes\PluginBase
 
     public function boot()
     {
-        Block::append('styles', '<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/'.Settings::get('version', '3.0.3').'/cookieconsent.min.css" />');
+        Block::append('styles', '<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/'.Settings::get('version', '3.1.0').'/cookieconsent.min.css" />');
         // Consent Cookie
-        Block::append('scripts', '<script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/'.Settings::get('version', '3.0.3').'/cookieconsent.min.js" type="text/javascript"></script>');
+        Block::append('scripts', '<script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/'.Settings::get('version', '3.1.0').'/cookieconsent.min.js" type="text/javascript"></script>');
         // Settings
         Block::append('scripts', '<script type="text/javascript">window.cookieconsent.initialise('.json_encode($this->getSettings(), false).');</script>');
     }
@@ -28,7 +28,10 @@ class Plugin extends \System\Classes\PluginBase
     public function registerPermissions()
     {
         return [
-            'nsrosenqvist.cookieconsent.settings' => ['label' => 'Manage CookieConsent Settings', 'tab' => 'CookieConsent']
+            'nsrosenqvist.cookieconsent.settings' => [
+                'label' => 'Manage CookieConsent Settings',
+                'tab'   => 'CookieConsent'
+            ]
         ];
     }
 
@@ -52,8 +55,8 @@ class Plugin extends \System\Classes\PluginBase
             "content" => [
                 "message" => Settings::get('message'),
                 "dismiss" => Settings::get('dismiss'),
-                "link" => Settings::get('learnMore'),
-                "href" => Settings::get('link', null),
+                "link"    => Settings::get('learnMore'),
+                "href"    => Settings::get('link', null),
             ],
             "palette" => [
                 "popup" => [
@@ -63,9 +66,9 @@ class Plugin extends \System\Classes\PluginBase
                     "background" => Settings::get('button_background', '#f1d600'),
                 ],
             ],
-            "container" => Settings::get('container', null),
-            "theme" => Settings::get('theme'),
-            "path" => Settings::get('path'),
+            "container"  => Settings::get('container', null),
+            "theme"      => Settings::get('theme'),
+            "path"       => Settings::get('path'),
             "expiryDays" => Settings::get('expiryDays')
         ];
     }
