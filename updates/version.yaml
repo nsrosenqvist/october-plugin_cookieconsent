@@ -7,3 +7,5 @@
 1.0.3:
     - ACL for settings model
     - latest option removed
+1.0.4:
+    - Made settings view more compact
